@@ -3,17 +3,28 @@ import CharactersList from './characters/CharactersList.vue';
 export default {
     name: 'AppMain',
     components: { CharactersList },
-    props: {
-        characters: Array
-    }
-}
+};
 </script>
 
 
 <template>
     <main class="container">
-        <CharactersList :characters="characters" />
+        <div class="interior-container rounded-3">
+            <CharactersList />
+        </div>
+
     </main>
 </template>
 
-<style></style>
+<style>
+.exterior-container {
+    width: 100%;
+    height: 600px;
+}
+
+.interior-container {
+    height: 500px;
+    margin-top: 150px;
+    background-color: gray;
+}
+</style>

@@ -12,11 +12,34 @@ export default {
 </script>
 
 <template>
-    <div class="character-card text-center p-2 bg-success ">
-        <img :src="image" :alt="name" class="img-fluid rounded-circle mb-3">
+    <div
+        class="my-card character-card text-center p-1 bg-success rounded-3 d-flex flex-column align-items-center justify-content-center">
+        <div class="img-container rounded-circle">
+            <img :src="image" :alt="name" class="img-fluid rounded-circle mb-1">
+        </div>
         <div> {{ number }}</div>
         <h4> {{ name }}</h4>
 
-        <div> {{ type }}</div>
+        <div class="fst-italic"> {{ type }}</div>
     </div>
 </template>
+
+<style>
+.my-card {
+    width: 220px;
+    height: 220px;
+    margin: auto;
+}
+
+.img-container {
+    max-height: 100px;
+    width: 120px;
+}
+
+
+img {
+    width: 120px;
+    max-height: 100px;
+    cursor: pointer;
+}
+</style>
