@@ -9,22 +9,30 @@ export default {
 
 <template>
     <main class="container">
+        <img src="../assets/img/Poké_Ball_icon.svg.png" alt="">
         <div class="interior-container rounded-3">
             <CharactersList />
         </div>
-
     </main>
 </template>
 
-<style>
-.exterior-container {
-    width: 100%;
-    height: 600px;
+<style scoped>
+img {
+    width: 80px;
+    max-height: 80px;
+    cursor: pointer;
+    margin-top: 50px;
 }
 
 .interior-container {
-    height: 500px;
-    margin-top: 150px;
-    background-color: gray;
+    height: 470px;
+    margin-top: 20px;
+    background-color: rgb(98, 102, 107);
+    border: 50px solid rgb(222, 222, 222);
+    border-width: 50px 30px 50px 30px;
+    box-sizing: content-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 15px;
 }
 </style>

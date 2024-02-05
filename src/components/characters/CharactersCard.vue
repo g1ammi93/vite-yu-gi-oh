@@ -12,8 +12,12 @@ export default {
 </script>
 
 <template>
-    <div
-        class="my-card character-card text-center p-1 bg-success rounded-3 d-flex flex-column align-items-center justify-content-center">
+    <div class="my-card character-card text-center p-1 rounded-3 d-flex flex-column align-items-center justify-content-center"
+        :class="{
+            'bg-grass': type === 'Grass',
+            'bg-fire': type === 'Fire',
+            'bg-water': type === 'Water'
+        }">
         <div class="img-container rounded-circle">
             <img :src="image" :alt="name" class="img-fluid rounded-circle mb-1">
         </div>
@@ -24,7 +28,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
 .my-card {
     width: 220px;
     height: 220px;
@@ -41,5 +45,17 @@ img {
     width: 120px;
     max-height: 100px;
     cursor: pointer;
+}
+
+.bg-fire {
+    background-color: rgb(253, 223, 223);
+}
+
+.bg-water {
+    background-color: rgb(222, 243, 253);
+}
+
+.bg-grass {
+    background-color: rgb(222, 253, 224);
 }
 </style>
