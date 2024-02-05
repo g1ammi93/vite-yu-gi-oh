@@ -10,7 +10,7 @@ export default {
 <template>
     <main class="container">
         <img src="../assets/img/Poké_Ball_icon.svg.png" alt="">
-        <div class="interior-container rounded-3">
+        <div class="interior-container rounded-4">
             <CharactersList />
         </div>
     </main>
@@ -21,7 +21,7 @@ img {
     width: 80px;
     max-height: 80px;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .interior-container {
