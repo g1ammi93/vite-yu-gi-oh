@@ -1,10 +1,14 @@
 <script>
+import AppMain from './components/AppMain.vue'
 export default {
-  name: 'Pokedex'
+  name: 'Pokedex',
+  components: { AppMain }
 };
 </script>
 
-<template></template>
+<template>
+  <AppMain />
+</template>
 
 <style lang="scss">
 @use './assets/scss/style.scss'
