@@ -2,14 +2,17 @@
 import CharactersList from './characters/CharactersList.vue';
 export default {
     name: 'AppMain',
-    components: { CharactersList }
+    components: { CharactersList },
+    props: {
+        characters: Array
+    }
 }
 </script>
 
 
 <template>
     <main class="container">
-        <CharactersList />
+        <CharactersList :characters="characters" />
     </main>
 </template>
 

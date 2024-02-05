@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-    <div class="character-card text-center p-2">
+    <div class="character-card text-center p-2 bg-success ">
         <img :src="image" :alt="name" class="img-fluid rounded-circle mb-3">
         <div> {{ number }}</div>
         <h4> {{ name }}</h4>
