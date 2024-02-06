@@ -3,6 +3,7 @@ export default {
     name: 'AppHeader',
     data: () => ({
         searchTerm: '',
+        selectedType: '',
         types: [
             "Bug",
             "Dark",
@@ -26,6 +27,7 @@ export default {
     }),
     methods: {
         selectType(type) {
+            this.selectedType = type === "All" ? "" : type;
             if (type === "All") {
                 this.$emit('type-selected', '');
             } else {
@@ -45,7 +47,7 @@ export default {
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Seleziona il tipo
+                {{ selectedType ? selectedType : 'Seleziona il tipo' }}
             </button>
             <ul class="dropdown-menu">
                 <li @click="selectType('All')">
