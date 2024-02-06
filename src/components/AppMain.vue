@@ -9,7 +9,6 @@ export default {
 
 <template>
     <main class="container">
-        <img src="../assets/img/Poké_Ball_icon.svg.png" alt="">
         <div class="interior-container rounded-4">
             <CharactersList />
         </div>
