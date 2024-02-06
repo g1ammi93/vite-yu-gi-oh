@@ -1,5 +1,5 @@
 <script>
-
+import { colorMap } from '../../data';
 export default {
     name: 'Characters Card',
     props: {
@@ -7,17 +7,18 @@ export default {
         image: String,
         type: String,
         number: Number
+    },
+    computed: {
+        bgColor() {
+            return colorMap[this.type];
+        }
     }
 }
 </script>
 
 <template>
     <div class="my-card character-card text-center p-1 rounded-3 d-flex flex-column align-items-center justify-content-center"
-        :class="{
-            'bg-grass': type === 'Grass',
-            'bg-fire': type === 'Fire',
-            'bg-water': type === 'Water'
-        }">
+        :style="`background-color: ${bgColor}; `">
         <div class="img-container rounded-circle">
             <img :src="image" :alt="name" class="img-fluid rounded-circle mb-1">
         </div>
@@ -45,17 +46,5 @@ img {
     width: 120px;
     max-height: 100px;
     cursor: pointer;
-}
-
-.bg-fire {
-    background-color: rgb(253, 223, 223);
-}
-
-.bg-water {
-    background-color: rgb(222, 243, 253);
-}
-
-.bg-grass {
-    background-color: rgb(222, 253, 224);
 }
 </style>
